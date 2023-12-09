@@ -1,5 +1,7 @@
 #!/bin/bash
 FILE=api-$(date -I)
+echo $FILE
+echo $MYSQL_USER
 
 mariadb-dump --compact -h db -p$MYSQL_PASSWORD -u $MYSQL_USER api > /tmp/$FILE.sql
 
